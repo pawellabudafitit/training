@@ -1,15 +1,29 @@
 import {Component, OnInit} from '@angular/core';
 import * as _ from 'lodash';
 
+class Link {
+  path: string;
+  name: string;
+}
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  names: string[];
+  links: Link[];
 
   ngOnInit(): void {
-    this.names = _.map(['first', 'second'], value => `${value} button`);
+    this.links = [
+      {
+        path: '/',
+        name: 'Home'
+      },
+      {
+        path: '/users',
+        name: 'Users'
+      }
+    ];
   }
 }

@@ -35,3 +35,25 @@ npm install --save lodash@4.17.1
 ```
 import * as _ from 'lodash';
 ```
+
+### Step 3 - Routing
+#### Create home and users components
+```
+ng generate component home
+ng generate component users
+```
+#### Add routes in AppModule
+```
+const routes: Routes = [
+  {
+    path: '',
+    component: HomeComponent
+  },
+  {
+    path: 'users',
+    component: UsersComponent
+  }
+];
+...
+imports: [..., RouterModule.forRoot(routes), ...]
+```
