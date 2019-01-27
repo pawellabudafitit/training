@@ -26,3 +26,12 @@ imports: [..., MatButtonModule, ...]
 ``` 
 <button mat-button></button> 
 ```
+
+### Step 2 - Adding library without @types
+```
+npm install --save lodash@4.17.1
+```
+#### Usage
+```
+import * as _ from 'lodash';
+```
