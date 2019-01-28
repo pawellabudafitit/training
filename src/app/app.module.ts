@@ -1,12 +1,13 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppComponent } from './app.component';
+import {AppComponent} from './app.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import { HomeComponent } from './home/home.component';
-import { UsersComponent } from './users/users.component';
+import {HomeComponent} from './home/home.component';
+import {UsersComponent} from './users/components/users.component';
 import {RouterModule, Routes} from "@angular/router";
-import {MatButtonModule, MatGridListModule, MatToolbarModule} from "@angular/material";
+import {MatButtonModule, MatToolbarModule} from "@angular/material";
+import {UsersModule} from "./users/users.module";
 
 const routes: Routes = [
   {
@@ -22,8 +23,7 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    UsersComponent
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +31,7 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     MatButtonModule,
     MatToolbarModule,
-    MatGridListModule
+    UsersModule
   ],
   providers: [],
   bootstrap: [AppComponent]

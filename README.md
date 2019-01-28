@@ -57,3 +57,21 @@ const routes: Routes = [
 ...
 imports: [..., RouterModule.forRoot(routes), ...]
 ```
+### Step 4 - Users module fetching data
+#### Installation
+```
+npm install -g json-server 
+
+// To run json-server
+json-server db.json
+```
+1. Create 'users' module
+```
+ng generate module users
+```
+2. Move users component to the module
+3. Correct imports for AppModule and UsersModule
+4. Create 'users' service
+5. Create 'User' model with properties 'name' and 'email'
+6. Implement getUsers method of service
+7. Use service in UsersComponent
