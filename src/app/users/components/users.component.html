@@ -1,3 +1,4 @@
+<app-create-user (new-user)="addUser($event)"></app-create-user>
 <mat-list>
-  <mat-list-item *ngFor="let user of users">{{user.name}} - {{user.email}}</mat-list-item>
+  <mat-list-item *ngFor="let user of users">{{user.id}} - {{user.name}}({{user.email}})</mat-list-item>
 </mat-list>
